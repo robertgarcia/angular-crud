@@ -1,0 +1,16 @@
+<div class="custyle">
+  <table class="table table-striped table-hover table-sm custab">
+      <thead>
+        <tr>
+          <th class="text-center">ID</th>
+          <th class="text-center">Rol</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rol of roles">
+          <th class="text-center">{{ rol.id }}</th>
+          <td class="text-center">{{ rol.nameRol }}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>

@@ -1,0 +1,24 @@
+<div class="custyle">
+    <button *ngIf="isViewer" (click)="addUser()" class="btn btn-outline-primary btn-sm float-right">Nuevo</button>
+  <table class="table table-striped table-hover table-sm custab">
+      <thead>
+        <tr>
+          <th class="text-center">ID</th>
+          <th class="text-center">Post</th>
+          <th class="text-center">Contenido</th>
+          <th *ngIf="isViewer" class="text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let post of posts">
+          <th class="text-center">{{ post.id }}</th>
+          <td class="text-center">{{ post.title }}</td>
+          <td class="text-center">{{ post.text }}</td>
+          <td *ngIf="isViewer" class="text-center">
+            <button class="btn btn-outline-success  btn-sm">Edit</button>
+            <button class="btn btn-outline-danger btn-sm">Del</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>

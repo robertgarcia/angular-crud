@@ -1,0 +1,28 @@
+<div class="custyle">
+    <button (click)="addUser()" class="btn btn-outline-primary btn-sm float-right">Nuevo</button>
+  <table class="table table-striped table-hover table-sm custab">
+      <thead>
+        <tr>
+          <th class="text-center">ID</th>
+          <th class="text-center">Nombre</th>
+          <th class="text-center">Alias</th>
+          <th class="text-center">Rol</th>
+          <th class="text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <th class="text-center">{{ user.id }}</th>
+          <td class="text-center">{{ user.name }}</td>
+          <td class="text-center">{{ user.nickName }}</td>
+          <td class="text-center">
+            <span class="badge badge-primary">{{ user.roles.nameRol }}</span>
+          </td>
+          <td class="text-center">
+            <button (click)="editUser(user.id)" class="btn btn-outline-success  btn-sm">Edit</button>
+            <button (click)="deleteUser(user.id)" class="btn btn-outline-danger btn-sm">Del</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
